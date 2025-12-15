@@ -1,0 +1,59 @@
+integrator               = sd        ; Langevin Dynamics
+dt                       = 0.001     ; [ ps ] integration step: 1 fs 
+tinit			 = 0         ; initial time
+nsteps                   = 100000    ; number of steps
+nstcomm                  = 100       ; number of steps for COM
+comm-mode                = Linear    ; mode for COM
+; Output control for saving trajectory
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 1000
+nstenergy                = 500
+nstxout-compressed       = 500
+; Neighborsearching and short-range nonbonded interactions
+cutoff-scheme            = verlet
+nstlist                  = 10
+ns-type                  = grid
+pbc                      = xyz
+periodic-molecules       = yes
+rlist                    = 1.2
+coulombtype              = PME
+rcoulomb                 = 1.2
+vdwtype                  = cutoff
+rvdw                     = 1.2
+vdw-modifier             = potential-switch
+rvdw-switch              = 1.0
+DispCorr                 = EnerPres
+pme_order                = 6
+fourierspacing           = 0.1
+ewald_rtol               = 1e-06
+; Temperature coupling
+; tcoupl is implicitly handled by the sd integrator
+tc-grps                  = system
+tau-t                    = 0.1
+ref-t                    = 300
+; Pressure coupling is off for NVT
+Pcoupl                   = No
+tau-p                    = 1.0
+compressibility          = 4.5e-05
+ref-p                    = 1.0
+gen-vel                  = yes
+gen-temp                 = 300.15
+gen-seed                 = 1231
+; options for bonds
+constraints              = none ;
+; Type of constraint algorithm
+constraint-algorithm     = lincs
+; Do not constrain the starting configuration
+continuation             = no
+; Highest order in the expansion of the constraint coupling matrix
+lincs-order              = 4
+lincs-iter               = 1
+lincs-warnangle          = 30
+
+
+
+
+
+
