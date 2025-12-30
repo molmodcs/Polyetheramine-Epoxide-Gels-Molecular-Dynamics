@@ -1,5 +1,12 @@
 # Polyetheramine-Epoxide-Gels-Molecular-Dynamics
 
+
+<img
+  src="./Graphical_Abstract.png"
+  alt="Alt text"
+  title="Graphical abstract"
+  style="display: inline-block; margin: 1.5 auto; max-width: 300px">
+
 Polymer–based materials have emerged as promising plataforms for controlled nutrient delivery in agriculture, offering enhanced efficiency and sustainability. In this study, we performed molecular dynamics
 simulations to investigate the self–assembly mechanism of Medipacs epoxy polymer (MEP113) vesicles in aqueous environments. We show that MEP113 concentration critically influences its aggregation behavior: the
 simulation in gas phase (vacuum) favors polymer clustering, while aqueous solvation promotes molecular dispersion through hydration effects. Radial distribution function (RDF) analyses revealed that water disrupts
